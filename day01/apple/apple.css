@@ -1,0 +1,86 @@
+.apple {
+  /* 자식의 배치도 css*/
+  display: flex;
+  /* 가운데로 맞춰줘 */
+  justify-content: center;
+  /* 자식들의 간격을 10px */
+  gap: 10px;
+
+  color: black;
+  background-color: white;
+  width: 400px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  /*  두께 스타일  색상 */
+  border: 1px solid #dbdbdb;
+
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .icon {
+    display: flex;
+    /* 가운데로 맞춰줘 */
+    align-items: center;
+    font-size: 50px;
+  }
+  .appleicon {
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    /*  두께 스타일  색상 */
+    border: 3px solid #dbdbdb;
+    border-radius: 50%;
+    /* 자식의 배치도 css*/
+    display: flex;
+    /* 가운데로 맞춰줘 */
+    justify-content: center;
+    /* 가운데로 맞춰줘 */
+    align-items: center;
+  }
+  .mailicon {
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    /*  두께 스타일  색상 */
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    /* 자식의 배치도 css*/
+    display: flex;
+    /* 가운데로 맞춰줘 */
+    justify-content: center;
+    /* 가운데로 맞춰줘 */
+    align-items: center;
+  }
+  /*.navericon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* 자식의 배치도 css*/
+  display: flex;
+  /* 가운데로 맞춰줘 */
+  justify-content: center;
+  /* 가운데로 맞춰줘 */
+  align-items: center;
+}
+.naver {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.appdiz {
+  display: flex;
+  background-color: black;
+  color: white;
+}
+.emildiz {
+  background-color: skyblue;
+  color: white;
+}
