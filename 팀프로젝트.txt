@@ -1,0 +1,26 @@
+git 사이트에서 링크 받기
+
+폴더 받기
+
+git pull
+
+git branch Hwang
+
+git checkout master
+clear
+
+git merge Hwang
+
+git merge
+
+git pull
+git init
+git  add .
+
+git remote -v
+git remote add
+git commit -m 
+
+git remote add origin <원격 주소 url> 
+git checkout Hwang
+git push
