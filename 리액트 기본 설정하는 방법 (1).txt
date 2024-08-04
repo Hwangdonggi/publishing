@@ -1,0 +1,111 @@
+vs code & node.js(LTS) & Git Bash 미리 설치하기
+
+open folder - new folder 만들기
+terminal(터미널) -> Bash로 선택하기 (powershell 아님)
+
+
+<타입 스크립트 설치>
+1. 폴더 만들기
+npx create-react-app [원하는 폴더명 소문자로 입력] --template typescript
+	( 또는 npm install -g typescript )
+
+2. (typescript를 작성할) 작업 폴더 위치로 이동하기 (경로 확인 : ls 치고 엔터)
+cd 입력한 폴더명
+
+3. (typescript 파일을 실행하기 위한) 패키지 설치
+npm install -g ts-node
+
+
+<리액트 설치>
+	*** 타입 스크립트 설치했으면 건너뛰기 ***
+	1.  React를 설치할 폴더 지정
+	npx create-react-app [원하는 폴더명 소문자로 입력] --template typescript
+
+2. 정상 설치 확인을 위해 React를 설치한 폴더명까지 이동하여 서버 동작시키기
+npm start
+	( 또는 npm run start )
+
+3. 불필요한 파일 제거
+   public 제거 -> favicon.ico
+			logo192.png
+			logo512.png
+			robots.txt 
+			
+	src 제거 -> App.test.tsx
+			logo.svg
+			react-app-env.d.ts
+			reportWebVitals.ts
+			setupTests.ts 
+
+[정리]
+public에는 index.html, manifest.json
+src에는 App.tsx, index.css, index.tsx 남겨두기
+
+4. 오류 날 수 있는 코드 제거
+App.tsx에서
+	[ function App() 함수 속 <header>...</header> 지우기 ]
+	[ import 부분 전부 지우기 ]
+
+index.tsx에서 
+	[ 주석, reportWebVitals(); 지우기 ]
+	[ import reportWebVitals...; 지우기 ]
+
+
+<Tailwindcss 설치>
+1. React가 설치된 폴더에서 다음 명령어 입력
+npm install -D tailwindcss
+	(또는 npm install tailwindcss / 설치제거 : npm uninstall tailwind)
+	(package.json 맨 아래 devDependencies에 오브젝트 속성에 tailwindcss 추가된 것을 확인)
+
+++ autoprefixer 설치
+npm install tailwindcss postcss autoprefixer
+
+2. 이어서 다음 명령어 입력
+npx tailwindcss init
+	(React가 설치된 폴더에 tailwind.config.js이 생성된 것을 확인)
+
+3. tailwind.config.js 열어서 다음과 같이 수정 (content : [ ] 안에 아래 코드 한 줄 넣으면 됨)
+	
+"./src/**/*.{js,jsx,ts,tsx}", 
+
+	<전체 내용>
+	/** @type {import('tailwindcss').Config} */
+	module.exports = {
+	  content: [
+	    "./src/**/*.{js,jsx,ts,tsx}",
+	  ],
+	  theme: {
+	    extend: {},
+	  },
+	  plugins: [],
+	}
+
+
+4. index.css 열어서 다음과 같이 수정
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+5. tailwindcss 확인 방법은 App.tsx 열어서 다음과 같이 수정 후 npm start로 리액트 서버 동작 후 확인
+
+function App() {
+return (
+    <div className="App">
+<h1 className="text-3xl font-bold underline">Hello world!</h1>
+ </div>
+  );
+}
+
+export default App;
+
+
+--------------------------------------------------------
++ 리액트 extension 추가
+<prettier>
+npm install --save-dev --save-exact prettier
+
+<tailwind_autoperfixer>
+npm install tailwindcss postcss autoprefixer
+--------------------------------------------------------
+*****끝!! The End*****
